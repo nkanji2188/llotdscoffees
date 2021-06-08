@@ -1,0 +1,313 @@
+@mixin fv-bef-aft{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+@mixin header-base {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    pointer-events: none;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:url(../images/lloyds-02.jpg) top center / cover;
+        z-index: -1;
+
+    }
+}
+@mixin header-ttl{
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 260px;
+        text-align: center;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 24px;
+        font-weight: 700;
+        z-index: 7;
+        text-shadow: 0 0 20px#000;
+        @media screen and (min-width:560px) {
+            width: 100%;
+        }
+        @media screen and (min-width:960px){
+            width: 960px;
+            font-size: 48px;
+}
+}
+    @mixin header-ttl-small {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: $color-orange;
+        text-align: center;
+    }
+@mixin main-base {
+    padding: 80px 0px 90px;
+    width: 100%;
+    // background: url(../images/main-black03.png)
+    // ,url(../images/main-bg7.jpg);
+    // background: url(../images/main-black2.jpg);
+    background: url(../images/main-black2.jpg);
+    @media screen and (min-width:960px) {
+       padding-top: 150px;
+      }
+}
+@mixin main-base-02 {
+    padding: 80px 0px 90px;
+    width: 100%;
+    // background: url(../images/main-black03.png)
+    // ,url(../images/main-bg7.jpg);
+    // background: url(../images/main-black2.jpg);
+    background: url(../images/main-gray.jpg);
+    @media screen and (min-width:960px) {
+       padding-top: 150px;
+      }
+}
+@mixin sec1-box {
+    width: 100%;
+        // padding: 70px 0;
+        background: url(../images/sec1-black.png) 
+        ,url(../images/lloyds-03.jpg) top center / cover;
+        position: relative;
+        margin-bottom: 50px;
+        @media screen and (min-width:560px) {
+            // width: 540px;
+            // padding: 150px 0;
+            margin: 0 auto 50px;
+            font-size: 48px;
+        }
+        @media screen and (min-width:960px) {
+            width: 50%;
+            margin-bottom: 0;
+            // padding-top: 120px 0;
+        }
+        // @media screen and (min-width:1160px) {
+        //     // width: 540px;
+        //     // padding: 150px 0;
+        //   }
+          &::before{
+            @include fv-bef-aft;
+            background:url(../images/main-black02.png) top center / cover;
+            z-index: 3;
+            clip: rect(0, 1920px, 9999px, 0);
+            transition: 1s;
+          }
+          &::after{
+            @include fv-bef-aft;
+            background:url(../images/lloyds-03-s.jpg) top center / cover;
+            z-index: 2;
+            clip: rect(0px, 1920px, 9999px, 0px);
+            transition: 2s;
+        }
+}
+@mixin sec-link{
+    display: inline-block;
+        margin: 30px 0 70px;
+        padding: 10px 20px 10px 20px;
+        background: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        position: relative;
+        border-radius: 5px;
+        // &::before{
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     top: 19.5px;
+        //     left: 10px;
+        //     width: 10px;
+        //     height: 2px;
+        //     background: rgb(255, 255, 255);
+        // }
+}
+
+////////////////////////////////
+//オンラインショップ
+    //////////////////////////
+@mixin ttl-line {
+    font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        &::after{
+            content:"";
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 5px auto 0;
+            background: $color-orange;
+        }
+    
+}
+
+//////////////////////////////////////
+// 店舗ページはセクション1.2共通
+//////////////////////////////////////
+
+@mixin c-sec{
+    &__inner{
+        width: 100%;
+        padding: 30px;
+        background: url(../images/lloyds-02.jpg) top center / cover;
+        @media screen and (min-width:960px) {
+            width: 900px;
+            height: 600px;
+            margin: 0 auto 70px;
+            }
+        @media screen and (min-width:1440px) {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto 70px;
+            }
+    }
+    &__box{
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        @media screen and (min-width:560px) {
+            width: 380px;
+            }
+    }
+    &__txt{
+        padding-top: 30px;
+        width: 100%;
+        // @media screen and (min-width:560px) {
+        //     width: 480px;
+        //     }
+    }
+    &__bg{
+        padding: 70px 0;
+        // background: url(../images/main-black03.png)
+        // ,url(../images/main-bg7.jpg);
+        background: url(../images/main-black2.jpg);
+    }
+    &__txt-02{
+        padding: 15px 20px;
+        @media screen and (min-width:560px) {
+            text-align: center;
+            }
+    }
+    &__ttl{
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 20px;
+        @media screen and (min-width:560px) {
+        text-align: center;
+        padding-left: 0;
+            }
+    }
+    // &__ttl-02{
+    //     font-size: 18px;
+    //     font-weight: bold;
+    //     padding-left: 20px;
+    //     @media screen and (min-width:560px) {
+    //     text-align: center;
+    //     padding-left: 0;
+    //         }
+    // }
+    &__box-02{
+        margin: 50px 0 0px;
+        width: 100%;
+        background: #fff;
+    }
+    &__pic{
+        width: 100%;
+        @media screen and (min-width:960px) {
+            width: 859px;
+            margin: 0 auto;
+        padding: 20px;
+            }
+    }
+    &__inner-02{
+        padding-bottom: 100px;
+        @media screen and (min-width:1080px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 1080px;
+            margin: 0 auto;
+            &::after{
+                content: "";
+                display: block;
+                width: 540px;
+                // height: 100px;
+            }
+    }
+}
+    &__box-03{
+        margin-bottom: 30px;
+        @media screen and (min-width:560px) {
+            display: flex;
+            justify-content: center;
+            padding-left: 20px;
+            // padding: 0 20px 0 0;
+        }
+        @media screen and (min-width:1080px) {
+            align-items: flex-start;
+            width: 540px;
+            // margin: 0 auto;
+            }
+    }
+    &__pic-02{
+        width: 100%;
+        @media screen and (min-width:560px) {
+            width: 364px;
+            }
+        @media screen and (min-width:1080px) {
+            width: 200px;
+            object-fit: contain;
+            // object-fit: scale-down;
+            }
+    }
+    &__box-04{
+        // width: 100px;
+        @media screen and (min-width:560px) {
+            width: 384px;
+            }
+        @media screen and (min-width:1080px) {
+            width: 260px;
+            width: 100%;
+            }
+    }
+    &__ttl-small{
+        padding: 30px 20px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        @media screen and (min-width:560px) {
+            padding-top: 0;
+            }
+    }
+    &__txt-03{
+        padding: 0 20px 20px;
+        margin-left: 10px;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 8px;
+            height: 2px;
+            background: rgb(255, 255, 255);
+        }
+    }
+    &__txt-04{
+        padding: 0 20px 20px;
+    }
+    &__map{
+        width: 100%;
+        height: 700px;
+        padding: 50px 0;
+        filter: grayscale(100%);
+        // filter: sepia(100%);
+    }
+}

@@ -1,0 +1,278 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    // ↓ レスポンシブ対応に必須の記述
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    // ↓    電話番号を入力した際に自動的リンクを切る
+    // 電話番号をクリックした時、自動電話機能を入れたい場合a要素で指定
+    meta(name="format-detection" content="telephone=no")
+    // ↓ 検索結果画面で表示される文言
+    meta(name="description" content="LLOTD’S COFFEE comany store")
+    // ↓ 検索ワードをカンマ区切りでcontent内に指定
+    meta(name="keywords" content="LLOTD’S COFFEE,comany store")
+    // ↓ 検索にヒットしないようにする(noindex) リンクとの関係性を切る（nofollow）
+    meta(name="robots" content="noindex, nofollow")
+    // ↓ iOSホーム画面にリンクを置いた際に表示されるアイコン
+    link(rel="apple-touch-icon" sizes="57x57" href="")
+    link(rel="apple-touch-icon" sizes="60x60" href="")
+    title LLOTD’S COFFEE  comany store
+    link(href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Noto+Sans+JP:400,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="../css/style.css")
+  body
+    .wrapper
+        header.c-header
+            h1
+                img.header__logo(src="../images/logo1-white.svg" alt="LLOTD’S COFFEE ネット販売")
+            p.header__ttl  comany store
+                span.header__ttl-small 直営店舗
+            p.header__lead  インストラクターやバリスタの資格を取得した当店自慢のスタッフ達が、当社のコーヒーをより美味しく召し上がって頂く為のお手伝いを致します。
+        include ../gnav
+        main.c-main
+            section.c-sec1
+                //- リードは共通
+                p.sec1__lead  インストラクターやバリスタの資格を取得した当店自慢のスタッフ達が、当社のコーヒーをより美味しく召し上がって頂く為のお手伝いを致します。
+                //- セクションタイトル全ページ共通部分
+                .c-sec1__inner
+                  .c-sec1__box
+                    //- 共通デザイン設定ｃｓｓ一番上
+                    h2.sec__ttl-02 LLOYD'S COFFEE
+                      br
+                      |otaru 
+                      span.sec__ttl-small-02 小樽店
+                    p.c-sec1__txt 大きな窓から小樽の海とヨットマリーナを眺める事ができるカウンター席が人気のカフェ店舗です。
+                      span.sec__space-02
+                      br
+                      |トレーニングを受けたスタッフ達がハンドドリップで落としたコーヒーや、エスプレッソマシーンを使って作るカフェラテなど、開放感のある店内でお楽しみください。
+                span.sec__space
+                .c-sec1__bg
+                  //- h3.c-sec1__ttl-02 STORE DATA
+                  h3.c-sec1__ttl store data
+                  p.c-sec1__txt-02 【営業時間】
+                    br
+                    |10：30 ～ 19：00（Lo：フード18:00、ドリンク18:30）
+                    br
+                    |（年末年始は変更有）
+                  p.c-sec1__txt-02 【店休日】
+                    br
+                    |元日
+                  p.c-sec1__txt-02 【ADO＆TEL】
+                    br
+                    |北海道小樽市築港11-1 ウイングベイ小樽3番街1階
+                    br
+                    |TEL：0134-21-7164）
+                  p.c-sec1__txt-02 【JRをご利用の場合】
+                    br
+                    |・JR札幌駅～JR小樽築港駅　快速で約25分
+                    br
+                    |・JR小樽駅～JR小樽築港駅　約6分
+                    br
+                    |※JR小樽築港駅直結徒歩5分
+                  p.c-sec1__txt-02 【車をご利用の場合】
+                    br
+                    |・札幌～小樽間　札樽自動車道（高速道路）使用で約30分
+                    br
+                    |・札幌～小樽間　一般道路使用で約45分
+                    br
+                    |※お車でお越しのお客様はウィングベイ小樽内駐車場をご利用下さい
+                span.sec__space
+                h3.sec__ttl-04 infomation
+                  span.sec__ttl-small Instagram
+                .c-sec1__box-02
+                  img.c-sec1__pic(src="../images/Instagram.jpg")
+                .c-sec1__bg
+                  h3.sec__ttl-03 part of menu
+                  span.sec__space
+                  .c-sec1__inner-02
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-01.jpg" alt="Blend Coffee")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Blend Coffee
+                        p.c-sec1__txt-03 Mild blend
+                          br
+                          |（マイルドブレンド）
+                        p.c-sec1__txt-03 Lloyd's blend
+                          br
+                          |（ロイズブレンド）
+                        p.c-sec1__txt-03 Mocha blend
+                          br
+                          |（モカブレンド）
+                        p.c-sec1__txt-03 Blue Mt No1 Blend
+                          br
+                          |（NO.1ブレンド）
+                        p.c-sec1__txt-03 Other（その他）
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-02.jpg" alt="Espresso and Arrange Coffee")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Espresso and Arrange Coffee
+                        p.c-sec1__txt-03 Caffe latte
+                          br
+                          |（カフェラテ）
+                        p.c-sec1__txt-03 Caffe au lait
+                          br
+                          |（カフェオレ）
+                        p.c-sec1__txt-03 Honey latte
+                          br
+                          |（ハニーラテ）
+                        p.c-sec1__txt-03 Vienna Coffee
+                          br
+                          |（ウィンナーコーヒー）
+                        p.c-sec1__txt-03 Other（その他）
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-03.jpg" alt="Other Beverage")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Other Beverage
+                        p.c-sec1__txt-03 Tea（紅茶）
+                        p.c-sec1__txt-03 Cocoa（ココア）
+                        p.c-sec1__txt-03 Strawberry Milk
+                          br
+                          |（ストロベリーミルク）
+                        p.c-sec1__txt-03 Orange Juice
+                          br
+                          |（オレンジジュース）
+                        p.c-sec1__txt-03 Other（その他）
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-04.jpg" alt="Homemade Cake")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Homemade Cake
+                        p.c-sec1__txt-03 Cheesecake
+                          br
+                          |（チーズケーキ）
+                        p.c-sec1__txt-03 Gateau au chocolat
+                          br
+                          |（ガトーショコラ）
+                        p.c-sec1__txt-04 ※ケーキは全て店内で手作りをしています。季節によってケーキの種類が変更になる事がありますので、ご了承ください。
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-05.jpg" alt="Garette & Crape")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Garette & Crape
+                        p.c-sec1__txt-03 Garette Complte（ガレットコンプレット）
+                        p.c-sec1__txt-03 Garette Raw ham & Parmesan Cheese salad
+                          br
+                          |（ガレット生ハムとパルメザンチーズ）
+                        p.c-sec1__txt-03 Crape Sugar Butter
+                          br
+                          |（クレープシュガーバター）
+                          br
+                          |（クレープバナナとエスプレッソクリーム）
+                          p.c-sec1__txt-03 Other（その他）
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/menu-06.jpg" alt="Other Foods")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Other Foods
+                        p.c-sec1__txt-03 Croissant
+                          br
+                          |（クロワッサン）
+                        p.c-sec1__txt-03 Croissant sand Espresso cream
+                          br
+                          |（クロワッサンサンド エスプレッソクリーム）
+                        p.c-sec1__txt-03 Croissant sand Ham & Cheese
+                          br
+                          |（クロワッサンサンド ハムとチーズ）
+                        p.c-sec1__txt-03 Gelato (Dgelato)
+                          br
+                          |（ジェラート）
+                    .c-sec1__box-03
+                      img.c-sec1__pic-02(src="../images/lloyds-03.jpg" alt="Selling beans")
+                      .c-sec1__box-04
+                        h4.c-sec1__ttl-small Selling beans
+                        p.c-sec1__txt-04 コーヒー豆の店頭販売も行っております。詳しくはスタッフまで。
+                span.sec__space
+                h3.sec__ttl-04 map
+                  span.sec__ttl-small ※小樽築港駅直結徒歩5分
+                iframe.c-sec1__map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1454.6295388136366!2d141.0235278080766!3d43.18307445057473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0ae06f642f8779%3A0xc4c25a5bcbf32042!2zTExPWUQnUyBDT0ZGRUUg5bCP5qi95bqX!5e0!3m2!1sja!2sjp!4v1579441318960!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="")
+                ////////////////
+                //- セクション２
+                ///////////////
+            section.c-sec2
+                .c-sec2__inner
+                  .c-sec2__box
+                    //- 共通デザイン設定ｃｓｓ一番上
+                    h2.sec__ttl-02 LLOYD'S COFFEE
+                      br
+                      |nishioka 
+                      span.sec__ttl-small-02 西岡店
+                    p.c-sec2__txt 国の登録有形文化財（沼田家住宅旧第二りんご倉庫）を、コーヒー豆売り専門店と致しました。
+                      span.sec__space-02
+                      br
+                      |専門店ならではの上質なコーヒー豆を100ｇから ご購入頂く事ができます。
+                span.sec__space
+                .c-sec2__bg
+                  h3.c-sec2__ttl store data
+                  p.c-sec2__txt-02 【営業時間】
+                    br
+                    |月曜･土曜･･･10:00～13:00 、14:00～17:00
+                    br
+                    |火曜･水曜･金曜･･･10:00～15:00
+                  p.c-sec2__txt-02 北海道札幌市豊平区西岡4条10丁目7-1
+                    br
+                    |※沼田家住宅旧第二りんご倉庫
+                  p.c-sec2__txt-02 TEL：011-855-3939
+                span.sec__space
+                h3.sec__ttl-04 infomation
+                  span.sec__ttl-small Instagram
+                .c-sec2__box-02
+                  img.c-sec2__pic(src="../images/Instagram-nishioka.jpg")
+                .c-sec2__bg
+                  h3.sec__ttl-03 products
+                  span.sec__space
+                  .c-sec2__container
+                      .c-sec2__container-02
+                        h4.c-sec2__ttl-small blend Coffee
+                        p.c-sec2__txt-03 Mild blend（マイルドブレンド）
+                          br
+                          |深みとコクのある当社自慢のブレンド。風味と口当たりが とてもマイルドなブレンド
+                        p.c-sec2__txt-03 Original blend（オリジナルブレンド）
+                          br
+                          |深煎りのブラジルをベースに深みとコクを出したブレンド
+                        p.c-sec2__txt-03 Lloyd's blend（ロイズブレンド）
+                          br
+                          |あっさりとした酸味が心地良いアメリカンタイプのブレンド
+                        p.c-sec2__txt-03 Mocha blend（エチオピアモカブレンド）
+                          br
+                          |エチオピア産のモカをベースに、さわやかな酸味と上品な香りがあるブレンド
+                        p.c-sec2__txt-03 Blue Mt No1 Blend（ブルーマウンテンNO.１ブレンド）
+                          br
+                          |苦味・酸味・香り・コクのバランスがとれ、あっさりとした味わいと柔らかみがあブレンド
+                      .c-sec2__container-02
+                        h4.c-sec2__ttl-small straight Coffee
+                        p.c-sec2__txt-03 Blue Mt No1（ブルーマウンテンNO.1）
+                          br
+                          |絶妙なバランスの酸味・甘味・香り・コクを備えたブルーマウンテンの最高級品
+                        p.c-sec2__txt-03 Kilimanjaro AA（キリマンジャロAA）
+                          br
+                          |心地良い酸味と甘い香り。後味が すっきりとした味わい
+                        p.c-sec2__txt-03 Ethiopia mocha（エチオピアモカ）
+                          br
+                          |独特の強く甘い香りの素晴らしい芳香とコクがあるコーヒー。エチオピア産モカの最高級品
+                        p.c-sec2__txt-03 Manderin G1（マンデリンG1）
+                          br
+                          |芳醇な香りとコクのあるやわらかな苦味が特長のコーヒー
+                        p.c-sec2__txt-03 Guatemala SHB（グァテマラSHB）
+                          br
+                          |上質な風味と、甘い香りのある柔らかい口当たり。すっきりとした味わい
+                      img.c-sec2__pic-02(src="../images/takeout.jpg" alt="テイクアウト")
+                      .c-sec2__container-02
+                        h4.c-sec2__ttl-small take out menu
+                        p.c-sec2__txt-03 Hot Coffee（水出しホットコーヒー）
+                        p.c-sec2__txt-03 Ice coffee（水出しアイスコーヒー）
+                        p.c-sec2__txt-04 ※西岡店のTake out Menuは、全て水出しコーヒーです。
+                        p.c-sec2__txt-04 水を使ってゆっくりと時間をかけて抽出する為、良質な甘味と柔らかい苦みが特徴として引き出されて嫌な苦みやエグみが抑えられています。
+                          br
+                          |またカフェインは水に溶けにくい性質がある為、お湯で入れたコーヒーよりもカフェインの量が少なくなります。
+                          br
+                          |西岡店の水出しコーヒーは、当社で水出しコーヒー用にブレンドした特別な豆を 24時間水に漬けて抽出する為、他店舗では味わえない特別なコーヒーに仕上がっております。
+                span.sec__space
+                h3.sec__ttl-04 map
+                  span.sec__ttl-small ※専用駐車場有り
+                iframe.c-sec2__map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.943654182397!2d141.3808395157077!3d43.00052100240594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2a9f04a052f9%3A0x64b793fa2377171f!2zTExPWUQnUyBDT0ZGRUXopb_lsqHlupc!5e0!3m2!1sja!2sjp!4v1579492831289!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="")
+        include ../footer
+    // ここから下にjsファイル設置
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../js/function.js")
+   
+//- npm init -y
+//- npm i -D gulp gulp-sass
+//- npm i -D gulp-pug
+//- npx pug html/comanystore.pug --watch --pretty
+//- link(href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Noto+Sans+JP:400,700&display=swap" rel="stylesheet")

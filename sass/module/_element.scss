@@ -1,0 +1,1112 @@
+// エレメント形式のクラスを記述
+
+////////////////////////
+// サイト全体デザイン設定
+////////////////////////
+.sec{
+    &__ttl{
+        font-size: 32px;
+        text-align: center;
+        font-family: 'Fredericka the Great', cursive;
+    }
+    &__ttl-01{
+        font-size: 46px;
+        text-align: center;
+        font-family: 'Fredericka the Great', cursive;
+    }
+    
+    &__ttl-02{
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    &__ttl-03{
+        font-size: 42px;
+        // font-weight: 700;
+        text-align: center;
+        font-family: 'Fredericka the Great', cursive;
+        &::after{
+            content:"";
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 5px auto 0;
+            background: $color-orange;
+        }
+    }
+    &__ttl-04{
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__ttl-small{
+        padding-top: 10px;
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        color: $color-orange;
+    }
+    &__ttl-small-02{
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 3;
+        color: $color-orange;
+    }
+    &__space{
+        display: block;
+        padding: 35px;
+    }
+    &__space-02{
+        display: block;
+        line-height: 1;
+    }
+}
+/////////////////////////////////////////
+// ヘッターはトップのみ個別設定
+// ｆｖのアニメはブロックとエレメントで制作
+/////////////////////////////////////////
+.t-header{
+    &__inner{
+        width: 100%;
+        height: 100%;
+        // 3枚目小樽店店内コーヒーディスプレイを引きでとった画像
+        background:url(../images/fv-05.jpg) top center / cover;
+        z-index: 1;
+        opacity: 0;
+        animation: fv-otaru-03 36s infinite;
+
+        &::before{
+            @include fv-bef-aft;
+        // 西岡店レンガインバート青
+        background:url(../images/fv-nishioka-01.jpg) top center / cover;
+        opacity: 0;
+        z-index: 4;
+        animation: fv-nishioka 36s infinite;
+        } 
+    &::after{
+        @include fv-bef-aft;
+        // 茶色の網掛け2後半部分
+        background: rgba(255, 136, 0, 0.4);
+        z-index: 5;
+        clip: rect(0px, 0, 9999px, 0px);
+        animation: fv-ami-brown-02 36s infinite ; 
+    }
+    }
+    &__inner-02{
+        &::before{
+            @include fv-bef-aft;
+            // ラストコーヒー豆ディスプレイ
+            background:url(../images/lloyds-03.jpg) top center / cover;
+            z-index: 6;
+            clip: rect(0px, 0, 9999px, 0px);
+            animation: fv-nishioka-02 36s infinite ; 
+        }
+    }
+    &__logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        // height: 30vh;
+        width: 90%;
+        z-index: 7;
+        @media screen and (min-width:560px) {
+           width: 70%;
+        }
+        @media screen and (min-width:960px) {
+           width: 35%;
+        }
+    }
+    // &__ttl{
+    //     @include header-ttl;
+    // }
+    //ｐｃヘッターのリードは一時止めてセクションに
+    // &__lead{
+    //     display: none;
+    //         @media screen and (min-width:960px){
+    //             display: block;
+    //             position: absolute;
+    //             top: 560px;
+    //             left: 50%;
+    //             transform: translateX(-50%);
+    //             width: 600px;
+    //             // margin: 200px auto;
+    //             // text-align: center;
+    //             font-size: 16px;
+    //             text-shadow: 0px 0px 60px #000;
+    //             z-index: 10;
+    //     }
+    // }
+    //////////////////////
+    // ｆｖ後半黒の網掛け
+    ///////////////////////
+    &__box-01,
+    &__box-02,
+    &__box-03,
+    &__box-04,
+    &__box-05,
+    &__box-06,
+    &__box-07,
+    &__box-08,
+    &__box-09,
+    &__box-10 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 13%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        animation: fv-ami-black 36s infinite;
+    }
+    &__box-02 {
+        left: 13%;
+        width: 2%;
+        // animation: t-header-02 36s infinite;
+    }
+    &__box-03 {
+        left: 15%;
+        width: 10%;
+    }
+    &__box-04 {
+        left: 25%;
+        width: 5%;
+        // animation: t-header-03 36s infinite;
+    }
+    &__box-05 {
+        left: 30%;
+        width: 20%;
+        // animation: t-header-02 36s infinite;
+    }
+    &__box-06 {
+        left: 50%;
+        width: 2%;
+    }
+    &__box-07 {
+        left: 52%;
+        width: 3%;
+    }
+    &__box-08 {
+        left: 55%;
+        width: 13%;
+        // animation: t-header-03 36s infinite;
+    }
+    &__box-09 {
+        left: 68%;
+        width: 7%;
+    }
+    &__box-10 {
+        left: 75%;
+        width: 25%;
+        // animation: t-header-03 36s infinite;
+    }
+}
+//////////////////////////
+// topページ以外のヘッター
+//////////////////////////
+.header{
+    &__logo{
+        // width: 130px;
+        // height: 30vh;
+        // margin: 0 auto;
+        // margin-bottom: -100px;
+        height: 30vh;
+        padding-top: 10%;
+        margin: 0 auto;
+        @media screen and (min-width:560px) {
+            height: 40vh;
+        //    width: 230px;
+        }
+    }
+
+    &__ttl{
+        @include header-ttl;
+    }
+  
+    &__ttl-small{
+        @include header-ttl-small;
+       
+    }
+
+    ///////////////////////////
+    // リードはｐｃのみFVに入る
+    ///////////////////////////
+    &__lead{
+        display: none;
+        // @media screen and (min-width:560px) {
+            //     width: 560 px;   
+            // }
+            @media screen and (min-width:960px){
+                display: block;
+                width: 600px;
+                margin: 200px auto;
+                text-align: center;
+                font-size: 16px;
+                text-shadow: 0px 0px 15px #000;
+        }
+    }
+}
+////////////////////////////
+// 全ページ共通ナビ
+// /////////////////////////
+.gnav-btn{
+    &__top, &__mid, &__btm{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        // background: #fff;
+        background: rgb(240, 240, 240);
+        // box-shadow:  0 0 5px rgba(0, 0, 0, 0.5);
+        transition: 1s;
+    }
+    &__mid{
+        height: 0;
+        top: 3px;
+        &::before{
+            content: "menu";
+            display: block;
+            color: rgb(240, 240, 240);
+        }
+    }
+    &__btm{
+        // height: 0;
+        top: 32px;
+        // &::before{
+        //     content: "menu";
+        //     display: block;
+        // }
+    }
+}
+.gnav{
+    &__nav{
+        height: 100%;
+        padding: 200px 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    &__link{
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+///////////////////////
+// topページセクション1
+///////////////////////
+.sec1{
+    ///////////////////////////
+    // リードはｐｃのみFVに入る→一時変更トップのみｐｃリードもセクションに
+    ///////////////////////////
+    &__pic-01{ 
+        width: 300px;
+        margin-left: 10px;
+        padding-bottom: 20px;
+        @media screen and (min-width:560px) {
+            margin-left: 50px;
+            width: 420px;
+        }
+        @media screen and (min-width:960px) {
+            margin-left: 150px;
+            width: 420px;
+        }
+        @media screen and (min-width:1440px) {
+            margin-left: 20%;
+        }
+    }
+    &__ashirai{
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 20px;
+        opacity: 0;
+        transition: 6s;
+        @media screen and (min-width:560px) {
+            width: 420px; 
+            }
+
+    }
+    // &__ashirai{
+    //     font-size: 32px;
+    //     text-align: center;
+    //     font-family: 'Fredericka the Great', cursive;
+    //     opacity: 0;
+    //     transition: 6s;
+    // }
+    &__ttl{
+        font-size: 16px;
+        text-align: center;
+        padding: 50px 20px 30px;  
+        opacity: 0;
+        // transform: translateY(30px);
+        transition: 7s;
+        @media screen and (min-width:960px) {
+           font-size: 22px;
+        }
+    }
+    &__top-lead{
+        // width: 310px;
+        padding: 0 20px 80px;  
+        font-size: 14px;
+        text-align: center;
+        opacity: 0;
+        // transform: translateY(30px);
+        transition: 8s;
+        @media screen and (min-width:560px) {
+            width: 440px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width:960px) {
+            // display: none;
+            width: 560px;
+            margin: 20px auto;
+        }
+       
+    }
+    // トップページ以外のリード
+    &__lead{
+        // width: 310px;
+        padding: 0 20px 50px;  
+        font-size: 14px;
+        text-align: center;
+        // text-shadow: 0px 0px 15px #000;
+        @media screen and (min-width:560px) {
+            width: 440px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width:960px) {
+            display: none;
+            // width: 560 px;
+        }
+    }
+    // &__pic-02{
+    //     width: 70px;
+    //     // padding-left: 50px;
+    //     margin: -50px 0 50px auto;
+    //     padding-right: 20px;
+    //     @media screen and (min-width:560px) {
+    //         padding-right: 50px;
+    //         margin: -100px 0 100px auto;
+    //     }
+    // }
+    &__pic-02{
+        width: 300px;
+        // padding-left: 50px;
+        margin: -50px 10px 50px auto;
+        // padding-right: 20px;
+        @media screen and (min-width:560px) {
+            // padding-right: 50px;
+            margin: -50px 50px 100px auto;
+            width: 500px;
+        }
+        @media screen and (min-width:1440px) {
+           margin-right: 20%;
+        }
+    }
+    &__inner{
+        background: url(../images/main-gray.jpg);
+        padding: 200px 0 100px;
+        position: relative;
+    @media screen and (min-width:960px) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    //   justify-content: space-around;
+      margin: 0 auto;
+    }
+}
+        &__ttl-01{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 32px;
+            font-weight: 700;
+            // font-family: 'Fredericka the Great', cursive;
+            &::after{
+                content:"";
+                display: block;
+                width: 60px;
+                height: 2px;
+                margin: 5px auto 0;
+                background: $color-orange;
+            }
+        }
+    &__box{
+        @include sec1-box;
+        // margin-bottom: 50px;
+        // @media screen and (min-width:960px) {
+        //    margin-bottom: 0;
+        //   }
+    }
+    &__box-02{
+        @include sec1-box;
+        margin-bottom: 0;
+           &::after{      
+            background:url(../images/lloyds-06-s.jpg) top center / cover;
+           
+        }
+    }
+    &__ttl-02{
+        width: 100%;
+        padding: 50px 0 0px 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        position: relative;
+        @media screen and (min-width:560px) {
+            width: 540px;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+        @media screen and (min-width:960px) {
+            width: 450px;
+        }
+        @media screen and (min-width:1160px) {
+            width: 540px;
+          }
+       
+    }
+   
+ 
+    &__txt{
+        padding: 30px 20px 0;
+        text-align: center;
+        font-size: 14px;
+        @media screen and (min-width:560px) {
+        width: 440px;
+        margin: 0 auto;
+        }
+    }
+    &__link{
+        @include sec-link;
+        background: rgba(0, 0, 0, 0.741);
+        margin: 30px 0 50px;
+    }
+
+}
+///////////////////////
+// topページセクション2
+///////////////////////
+.sec2{
+    &__coffee-01{
+        width: 250px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    &__ttl-pic{
+        width: 270px;
+        margin: 0 auto;
+    }
+    &__inner{
+        padding-top: 40px;
+        @media screen and (min-width:560px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width:960px) {
+            justify-content: space-between;
+          
+
+        }
+        // @media screen and (min-width:1380px) {
+        //     justify-content: space-between;
+        // }
+        &::after{
+            content: "";
+            display: inline-block;
+            @media screen and (min-width:560px){
+                 width: 330px;
+            }
+            @media screen and (min-width:960px){
+                width: 305px;
+            }
+        }
+    }
+    &__box-01{
+        position: relative;
+        width: 260px;
+        margin: 0 auto 30px;
+        padding: 10px;
+        // border: 1px solid #000;
+        border-radius: 5px;
+        background:rgba(167, 138, 76, 0.3);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.5s;
+        @media screen and (min-width:1366px) {
+            width: 250px;
+            }
+    }
+    &__box-02{
+        @extend .sec2__box-01;
+        transition: 1s;
+        transform: translateY(30px);
+    }
+    &__box-03{
+        @extend .sec2__box-01;
+        transition: 1.5s;
+        transform: translateY(40px);
+    }
+    &__box-04{
+        @extend .sec2__box-01;
+        transition: 2s;
+        transform: translateY(50px);
+    }
+    &__box-05{
+        @extend .sec2__box-01;
+        transition: 2.5s;
+        transform: translateY(60px);
+    }
+
+    &__box-06{
+        @extend .sec2__box-01;
+        transition: 0.5s;
+        transform: translateY(20px);
+    }
+    &__box-07{
+        @extend .sec2__box-01;
+        transition: 1s;
+        transform: translateY(30px);
+    }
+    &__box-08{
+        @extend .sec2__box-01;
+        transition: 1.5s;
+        transform: translateY(40px);
+    }
+    &__box-09{
+        @extend .sec2__box-01;
+        transition: 2s;
+        transform: translateY(50px);
+    }
+    &__box-10{
+        @extend .sec2__box-01;
+        transition: 2.5s;
+        transform: translateY(60px);
+    }
+
+    &__ttl-02{
+        padding: 10px 0 20px;
+        font-weight: 700;
+        &::after{
+            content:"";
+            display: block;
+            margin-top: 5px;
+            width: 60px;
+            height: 2px;
+            background: $color-orange;
+        }
+    }
+    &__mark{
+        padding-left: 10px;
+        letter-spacing: 10px;
+        color: $color-orange;
+        // @media screen and (min-width:960px) {
+        // margin-right: 50px;
+        //     }
+    }
+    &__txt-02{
+        padding-top: 20px;
+        padding-bottom: 60px;
+        // @media screen and (min-width:960px) {
+        //     padding-top: 0;
+        //     width: 550px;
+        //     }
+    }
+    &__link{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-decoration: none;
+        // @media screen and (min-width:960px) {
+        //     text-align: right;
+        //     }
+    }
+    &__space{
+        display: block;
+        padding: 50px;
+    }
+    &__coffee-02{
+        width: 300px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        @media screen and (min-width:560px) {
+            width: 450px; 
+            }
+    }
+    &__ttl-pic-02{
+        width: 280px;
+        margin: 0 auto;
+        @media screen and (min-width:560px) {
+            width:320px; 
+            }
+    }
+}
+///////////////////////
+// トップページフッター
+///////////////////////
+.t-footer{
+    &__box{
+        @media screen and (min-width:560px) {
+            width: 500px; 
+            margin: 0 auto; 
+            }
+    }
+    &__nav{
+        padding: 100px 0 0px;
+        @media screen and (min-width:560px) {
+            padding: 100px 0 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 500px; 
+            }
+    }
+    &__item{
+        list-style-type: none;
+    }
+    &__link{
+        padding-bottom: 20px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        @media screen and (min-width:560px){
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+        @media screen and (min-width:960px){
+            padding-bottom: 0px;
+        }
+    }
+    &__sns{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX( -50%);
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 20px;
+        @media screen and (min-width:560px) {
+           position: relative;
+           bottom: 0;
+           left: 0;
+           transform: none;
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            margin: 0 auto;
+            padding-top: 20px;
+          }
+    }
+    &__sns-in{
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+        @media screen and (min-width:560px) {
+           margin: 0;
+        }
+    }
+    &__copy{
+        display: none;
+        @media screen and (min-width:560px) {
+        display: block;
+        font-size: 11px;
+        padding-left: 250px; 
+    }
+}
+    &__copy-02{
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX( -50%);
+        font-size: 11px;
+        @media screen and (min-width:560px) {
+        display: none;
+    }
+}
+}
+///////////////////////
+// 共通フッター
+///////////////////////
+.footer{
+    &__logo{
+        width: 100px;
+        margin:30px auto;
+        @media screen and (min-width:560px) {
+              width: 120px;
+              margin: 0;
+          }  
+        @media screen and (min-width:960px) {
+              width: 150px; 
+          }  
+    }
+    &__box{
+        @media screen and (min-width:560px) {
+            width: 500px; 
+            margin: 0 auto; 
+            }
+    }
+    &__nav{
+        // padding: 0;
+        @media screen and (min-width:560px) {
+            padding: 100px 0 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 500px; 
+            }
+    }
+    &__item{
+        list-style-type: none;
+    }
+    &__link{
+        padding-bottom: 15px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        @media screen and (min-width:560px){
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+        @media screen and (min-width:960px){
+            padding-bottom: 0px;
+        }
+    }
+    &__sns{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX( -50%);
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 20px;
+        @media screen and (min-width:560px) {
+           position: relative;
+           bottom: 0;
+           left: 0;
+           transform: none;
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            margin: 0 auto;
+            padding-top: 20px;
+          }
+    }
+    &__sns-in{
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+        @media screen and (min-width:560px) {
+           margin: 0;
+        }
+    }
+    &__copy{
+        display: none;
+        @media screen and (min-width:560px) {
+        display: block;
+        font-size: 11px;
+        padding-left: 250px; 
+    }
+}
+    &__copy-02{
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX( -50%);
+        font-size: 11px;
+        @media screen and (min-width:560px) {
+        display: none;
+    }
+}
+}
+/////////////////////////
+// オンラインショップセクション1
+/////////////////////////
+.o-sec1{
+    &__inner{
+        padding-top: 50px;
+        @media screen and (min-width:560px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+        @media screen and (min-width:960px) {
+            width: 950px;
+            margin: 0 auto;
+        }
+
+        &:after{
+            display: inline-block;
+            content:"";
+            padding-bottom: 20px;
+            @media screen and (min-width:560px) {
+                width: 320px;
+            }
+
+        }
+    }
+    &__box{
+        padding-bottom: 20px;
+        @media screen and (min-width:560px) {
+            width: 320px;
+        }
+    }
+    &__ttl{
+        @include ttl-line;
+    }
+    &__pic{
+        width: 100%;
+        margin: 30px 0;
+        @media screen and (min-width:560px) {
+            width: 320px;
+            }
+    }
+    &__txt{
+        padding: 0 20px;
+    }
+    &__price{
+        padding: 20px 20px;
+        font-size: 36px;
+    }
+    &__txt-02{
+        padding: 0 20px;
+    }
+    &__small{
+        font-size: 8px;
+        padding-left: 5px;
+    }
+    &__link{
+        @include sec-link;
+        margin-left: 20px;
+    }
+    &__txt-small{
+        display: block;
+        font-size: 11px;
+        padding-left: 20px;
+    }
+
+}
+///////////////////////
+// オンラインページセクション2
+///////////////////////
+.o-sec2{
+   
+    &__ttl{
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__txt{
+        padding-bottom: 30px;
+        text-align: center;
+        @media screen and (min-width:960px) {       
+            width: 896px;
+            margin: 0 auto;
+                    }
+    }
+}
+///////////////////
+// 直営店舗
+// c-sec1 とc-sec2と基本同じミックスインに記述し変更箇所のみ記述
+//////////////////
+    .c-sec1{
+        @include c-sec;
+    }
+    .c-sec2{
+        @include c-sec;
+        &__inner{
+            background: url(../images/nishiokaten.jpg) top center / cover;
+        }
+        &__container{
+            // padding-bottom: 70px;
+            @media screen and (min-width:960px) {       
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            width: 920px;
+            margin: 0 auto;
+                        }
+        }
+        &__container-02{
+            width: 100%;
+            padding-bottom: 30px;
+            @media screen and (min-width:560px) {       
+                width: 432px;
+                margin: 0 auto;
+                        }
+        }
+        &__ttl-small{
+            padding-bottom: 30px;
+        }
+        &__pic-02{
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 30px;
+            @media screen and (min-width:560px) {       
+                width: 432px;
+              
+                        }
+        }
+      
+    }
+/////////////////////////////
+//お問い合わせページ
+/////////////////////////////
+.co-sec1{
+    &__ttl{
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+        padding-bottom: 30px;
+    
+    }
+}
+.form{
+    &__name{
+        display: block;
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+    &__small{
+        display: inline;
+        font-size: 11px;
+    }
+    &__name-02{
+        // display: block;
+        width: 100%;
+        height: 30px;
+        padding: 20px;
+        background: #fff;
+        color: #000;
+    }
+    &__mail{
+        @extend .form__name;
+    }
+    &__mail-02{
+       @extend .form__name-02;
+    }
+    &__text{
+        @extend .form__name;
+    }
+    &__text-02{
+        @extend .form__name-02;
+        height: 90px;
+    }
+    &__small-02{
+        @extend .form__name;
+        font-size: 12px;
+    }
+    &__btn{
+        display: block;
+        width: 100px;
+        height: 30px;
+        margin: 0 auto;
+        background: #000;
+    }
+}
+/////////////////////////////
+//会社概要
+/////////////////////////////
+.a-sec1{
+    &__ttl{
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+        padding-bottom: 60px;
+    
+    }
+    &__txt{
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+    &__txt-02{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    &__txt-03{
+        @extend .a-sec1__txt;
+        font-weight: normal;
+    }
+}
+/////////////////////////////////////
+//特定商取引
+//////////////////////////////////////
+.l-header{
+    &__ttl{
+        @include header-ttl;
+        line-height: 1;
+        top: 55%;
+    }
+    &__ttl-small{
+        @include header-ttl-small;
+        line-height: 3;
+    }
+}
+.l-sec1{
+    &__ttl{
+        @extend .a-sec1__ttl;
+    }
+    &__txt{
+        @extend .a-sec1__txt;
+        padding: 0 20px 10px 20px;
+    }
+    &__txt-02{
+        @extend .a-sec1__txt-02;
+        padding: 0 20px 50px 20px;
+    }
+    &__txt-03{
+        @extend .a-sec1__txt-03;
+        padding: 0 20px 10px 20px;
+    }
+}
+/////////////////////////////////////
+//プライバシーポリシー
+//////////////////////////////////////
+// .p-header{
+//     &__ttl{
+//         @include header-ttl;
+//     }
+//     &__ttl-small{
+//         @include header-ttl-small;
+//     }
+// }
+.p-sec1{
+    &__ttl{
+        @extend .a-sec1__ttl;
+    }
+    &__txt{
+        padding: 0 20px 30px 20px;
+        @media screen and (min-width: 560px){
+            padding: 0 50px 30px 50px;  
+        }
+        @media screen and (min-width: 960px){
+            padding: 0 0 30px 0;  
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+    &__ttl-02{
+        @extend .a-sec1__ttl;
+        padding-top: 50px;
+    }
+    
+}

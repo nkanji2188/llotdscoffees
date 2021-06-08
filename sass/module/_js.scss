@@ -1,0 +1,276 @@
+
+//////////////////////////////////////////////
+// ファーストビューのオープニングアニメーション
+///////////////////////////////////////////////
+@keyframes fv-start {
+  0% {
+    filter: blur(5px) sepia(100%);
+  }
+  30% {
+    filter: blur(5px) sepia(100%);
+  }
+
+  100% {
+    filter: none;
+  }
+}
+////////////////////////////////////
+// ｆｖアニメーション茶色の網掛け
+/////////////////////////////////////
+@keyframes fv-ami-brown {
+  0% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  14% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  17% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  32.5% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  35.5% {
+    clip: rect(0, 0, 9999px, 0);
+  }
+
+}
+
+////////////////////////////
+// 小樽店2マイ目コーヒー注ぐ
+/////////////////////////////
+@keyframes fv-otaru-02 {
+  0% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  15.5% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  18.5% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  31% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  34% {
+    clip: rect(0, 0, 9999px, 0);
+  }
+}
+//////////////////////////////////////////////
+// 小樽店3マイ目店内コーヒーディスプレイ引き画像
+//////////////////////////////////////////////
+@keyframes fv-otaru-03 {
+  0% {
+    opacity: 0;
+  }
+  29.9% {
+    opacity: 0;
+
+  }
+  31% {
+    opacity: 1;
+   
+  }
+  98.5% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+//////////////////////////////////
+// fv後半黒の網開閉アニメーション
+/////////////////////////////////
+@keyframes fv-ami-black {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+  48% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+  49.5% {
+    transform: scaleX(1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+  97% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+  98.5% {
+    transform: scaleX(1);
+    transform-origin: 0 0;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+}
+//////////////////////////////
+// ｆｖ西岡店のインバート部分
+////////////////////////////
+@keyframes fv-nishioka {
+  0% {
+    opacity: 0;
+  }
+
+  // }
+  49.5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  
+  98.5% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+////////////////////////////////////
+// ｆｖアニメーション茶色の網掛け2後半部分
+/////////////////////////////////////
+@keyframes fv-ami-brown-02 {
+  0% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+
+  65% {
+    clip: rect(0px, 0, 9999px, 0px);
+    // z-index: 5;
+  }
+  68% {
+    clip: rect(0, 1920px, 9999px, 0);
+    // z-index: 4;
+  }
+ 81% {
+    clip: rect(0, 1920px, 9999px, 0);
+    // z-index: 4;
+  }
+  84% {
+    clip: rect(0, 0, 9999px, 0);
+    // z-index: 5;
+  }
+}
+///////////////////////////////////////////
+// ｆｖラストコーヒー豆ディスプレイ
+/////////////////////////////////////////////
+@keyframes fv-nishioka-02 {
+  0% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  66.5% {
+    clip: rect(0px, 0, 9999px, 0px);
+  }
+  69.5% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  79.5% {
+    clip: rect(0, 1920px, 9999px, 0);
+  }
+  82.5% {
+    clip: rect(0, 0, 9999px, 0);
+  }
+}
+
+// @keyframes sec1-open {
+//   0% {
+//     clip: rect(0px, 1920px, 9999px, 0px);
+//   }
+//   100% {
+//     clip: rect(0, 0px, 9999px, 0);
+// }
+// }
+// @keyframes t-header-02 {
+//   0% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   47% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   49.5% {
+//     transform: scaleX(1);
+//     transform-origin: 0 0;
+//   }
+//   52% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   96% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   98.5% {
+//     transform: scaleX(1);
+//     transform-origin: 0 0;
+//   }
+//   100% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+// }
+// @keyframes t-header-03 {
+//   0% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   48.5% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   49.5% {
+//     transform: scaleX(1);
+//     transform-origin: 0 0;
+//   }
+//   50.5% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   98% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   98.5% {
+//     transform: scaleX(1);
+//     transform-origin: 0 0;
+//   }
+//   99.5% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+//   100% {
+//     transform: scaleX(0);
+//     transform-origin: 0 0;
+//   }
+// }
+
+
+
+
+
+
+
+// @keyframes fv-02 {
+//   0% {
+//     width: 0;
+//   }
+
+//   85% {
+//     width: 100%;
+//   }
+
+//   100% {
+//     width: 100%;
+//   }
+// }
+
+

@@ -1,0 +1,84 @@
+// モディファイア形式のクラスを記述
+
+// ブロックやエレメントの後に記述
+// .header--about{}
+// .header__ttl--about{}
+// .sec1__ttl--02{
+//     font-size: 40px;
+//     line-height: 1.2;
+// }
+
+// .header--o{
+//     background: rgb(47, 47, 47);
+// }
+// .header--c{
+//     &::before{
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background:url(../images/lloyds-06.jpg) top center / cover;
+//         z-index: -1;
+
+//     }
+// }
+.gnav--02{
+    opacity: 1;
+    pointer-events: visible;
+}
+.gnav-btn{
+    &__top--02{
+        // background: #fff;
+        // transform: translateX(2px) translateY(15px)rotateZ(405deg);
+        transform:  translateY(16px)rotateZ(405deg);
+    }
+    &__mid--02{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    &__btm--02{
+        // background: #fff;
+        // transform:  translateX(-5px)translateY(-10px)rotateZ(-405deg);
+        transform:  translateY(-16px) rotateZ(-405deg);
+    }
+}
+.sec1__ashirai--02{
+    opacity: 1;
+        // transform: translateY(0px);
+}
+.sec1__ttl--02{
+    opacity: 1;
+        // transform: translateY(0px);
+}
+.sec1__top-lead--02{
+    opacity: 1;
+        // transform: translateY(0px);
+}
+.sec1__box--02{
+    background: url(../images/sec1-black.png) 
+    ,url(../images/lloyds-06.jpg) top center / cover;
+}
+.sec1__box--03{
+    &::before{
+        @include fv-bef-aft;
+        // background: rgba(255, 136, 0, 0.4);
+        // z-index: 3;
+        clip: rect(0px, 0px, 9999px, 0px);
+        // animation: sce1-open 3s ; 
+    }
+    &::after{
+        @include fv-bef-aft;
+        // background: url(../images/sec1-black.png) 
+        // ,url(../images/lloyds-03.jpg) top center / cover;background:url(../images/lloyds-03.jpg) top center / cover;
+        // z-index: 2;
+        clip: rect(0px, 0px, 9999px, 0px);
+        // animation: sec1-open 3s 1s; 
+    }
+}
+.sec2__box--02{
+    opacity: 1;
+        transform: translateY(0px);
+}

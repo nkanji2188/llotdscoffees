@@ -1,0 +1,382 @@
+// ブロック形式のクラスを記述
+
+// .header{
+// }
+
+// .main{
+// }
+*{
+    font-family:  'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+}
+////////////////////////////////////////////////////////
+// トップのヘッター
+// トップのみ個別設定
+// ｆｖのアニメはブロックとエレメントのインナー1・2、box1-10で制作
+////////////////////////////////////////////////////////
+.t-header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    pointer-events: none;
+    // 小樽店画像一枚目メニューのある画像
+    background:url(../images/sec1-black.png) ,url(../images/fv-otaru.jpg) top center / cover;
+    animation: fv-start 4s ;
+    &::before{
+        @include fv-bef-aft;
+        // 茶色の網掛け
+        background: rgba(255, 136, 0, 0.4);
+        z-index: 2;
+        clip: rect(0px, 0, 9999px, 0px);
+    animation: fv-ami-brown 36s infinite ;
+    }
+    &::after{
+        @include fv-bef-aft;
+        // 小樽店2枚目コーヒー注ぐ画像
+        background:url(../images/sec1-black.png) ,url(../images/fv-04.jpg) top center / cover;
+        clip: rect(0px, 0, 9999px, 0px);
+        z-index: 3;
+        animation: fv-otaru-02 36s infinite;
+
+    }
+    
+}
+//////////////////////
+// ナビは全ページ共通
+//////////////////////
+
+.gnav-btn{
+    width: 44px;
+    height: 36px;
+    // background: rgba(0, 0, 0, 0.183);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    // &::after{
+    //     content: "";
+    //     display: block;
+    //     background: #000;
+    //     margin-top: -20px;
+    //     height: 76px;
+    //     width: 100px;
+    //     padding-left: 20px;
+    // }
+
+}
+.gnav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+    z-index: 98;
+}
+.t-main{
+    padding: 0px 0px 90px;
+    width: 100%;
+    // background: url(../images/main-black03.png)
+    // ,url(../images/main-bg7.jpg);
+    background: url(../images/main-black2.jpg);
+    
+    // background: url(../images/main-black.png)
+    //     ,url(../images/main-black.jpg);
+    
+}
+
+///////////////////////
+// topページセクション
+///////////////////////
+.sec1{
+    background: url(../images/main-black2.jpg);
+    // background: url(../images/main-black.png)
+    //     ,url(../images/main-black.jpg);
+        // @media screen and (min-width:960px) {
+        //     padding-top: 150px;
+        //    }
+}
+.sec2{
+    
+    padding: 70px 20px 60px;
+    position: relative;
+    // background: rgba(0, 0, 0, 0.3);
+    // background: url(../images/main-black03.png)
+    // ,url(../images/main-bg7.jpg);
+    
+    @media screen and (min-width:560px) {
+        padding: 70px 54px 60px;
+    }
+    @media screen and (min-width:960px) {
+        padding: 70px 0 60px;
+        width: 920px;
+        margin: 0 auto;
+        }
+    @media screen and (min-width:1366px) {
+        padding: 70px 0 60px;
+        width: 1300px;
+        
+        }
+}
+.footer-fixed-space{
+    width: 100%;
+    height: 400px;
+    // background: rgba(0, 0, 0, 0.7);
+    // padding: 10px 50px 100px 50px;
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        // height: 300px;
+        background: url(../images/footer-img.jpg) center center / cover;
+        z-index: -2;
+        // @media screen and (min-width:560px){
+        //     height: 800px; 
+        // }
+    }
+    &::before{
+        display: block;
+        position: fixed;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        content: url(../images/logo1-white.svg) ;
+        width: 150px;
+        @media screen and (min-width:560px) {
+            top: 500px;
+        }
+        @media screen and (min-width:960px) {
+            top: 150px;
+        }
+        @media screen and (min-width:1371px) {
+            top: 500px;
+        }
+    }
+}
+///////////////////////////////////
+//トップページフッター
+//////////////////////////////////
+.t-footer{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main-black.png)
+ ,url(../images/main-black.jpg);
+    padding: 10px 50px 100px 50px;
+    position: relative;
+    opacity: 0.9;
+    @media screen and (min-width:560px){
+        padding: 50px 50px 50px 50px;
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        // align-items: stretch;
+    }
+    @media screen and (min-width:1366px){
+        padding: 50px 12% 50px 12%;
+    }
+    @media screen and (min-width:1920px){
+      
+        padding: 50px 310px 50px 310px;
+    }
+}
+///////////////////////////////////
+//共通フッター
+//////////////////////////////////
+.footer{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main-black.png)
+ ,url(../images/main-black.jpg);
+    padding: 10px 50px 100px 50px;
+    position: relative;
+    opacity: 0.9;
+    @media screen and (min-width:560px){
+        padding: 50px 50px 50px 50px;
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        // align-items: stretch;
+    }
+    @media screen and (min-width:1366px){
+        padding: 50px 12% 50px 12%;
+    }
+    @media screen and (min-width:1920px){
+      
+        padding: 50px 310px 50px 310px;
+    }
+}
+// .footer{
+    
+//     width: 100%;
+//     height: 100vh;
+//     background: rgba(0, 0, 0, 0.7);
+//     padding: 10px 50px 100px 50px;
+//     position: relative;
+//     // display: flex;
+//     //     justify-content: space-between;
+//     //     align-items: flex-end;
+//     @media screen and (min-width:560px){
+//         height: 300px;
+//         display: flex;
+//         justify-content: space-between;
+//         // align-items: stretch;
+//     }
+//     @media screen and (min-width:1366px){
+//         padding: 100px 12% 50px 12%;
+//     }
+//     @media screen and (min-width:1920px){
+      
+//         padding: 100px 310px 50px 310px;
+//     }
+//     &::after{
+//         content: "";
+//         display: block;
+//         position: fixed;
+//         bottom: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100vh;
+//         // height: 300px;
+//         background: url(../images/lloyds-02.jpg) center center / cover;
+//         z-index: -2;
+//         @media screen and (min-width:560px){
+//             height: 300px; 
+//         }
+//     }
+// }
+// .space{
+//     width: 100%;
+//     height: 100vh;
+// }
+///////////////////////
+// オンラインページ
+///////////////////////
+.o-header{
+    @include header-base;
+    background: rgb(47, 47, 47);
+}
+.o-main{
+    padding: 80px 0px 90px;
+    width: 100%;
+    // background: url(../images/main-black03.png)
+    // ,url(../images/main-bg7.jpg);
+    background: url(../images/main-black2.jpg);
+    @media screen and (min-width:960px) {
+       padding-top: 150px;
+      }
+}
+.o-cart{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 48px;
+    z-index: 1;
+    @media screen and (min-width:560px) {
+        width: 64px;
+    }
+}
+.o-sec2{
+    width: 100%;
+        padding: 70px 20px 150px;
+        margin: 70px auto -90px;
+        background: url(../images/main-black.png)
+        ,url(../images/main-black.jpg);
+        // background: rgba(0, 0, 0, 0.8);
+        // margin-bottom: -90px;
+        @media screen and (min-width:560px) {
+            padding: 70px 100px 150px;
+            
+        }
+        @media screen and (min-width:960px) {
+            width: 100%;
+            // width: 896px;
+            padding: 70px 150px 150px;
+            
+            }
+}
+///////////////////////
+// 店舗ページ
+///////////////////////
+.c-header{
+    @include header-base;
+    &::before{
+        background:url(../images/lloyds-06.jpg) top center / cover;
+
+    }
+}
+.c-main{
+    @include main-base-02;
+   
+}
+.c-sec2{
+    padding-top: 70px;
+}
+/////////////////////////////
+//お問い合わせページ
+/////////////////////////////
+.co-header{
+    @include header-base;
+    &::before{
+    background: url(../images/header-base.jpg);
+    }
+}
+
+.co-main{
+    @include main-base;
+}
+.form{
+    width: 90%;
+    // border: 1px solid #fff;
+    margin: 0 auto;
+    @media screen and (min-width: 960px) {
+        width: 50%;
+    }
+}
+/////////////////////////////
+//会社概要
+/////////////////////////////
+.a-header{
+    @include header-base;
+    &::before{
+    background: url(../images/header-base.jpg);
+    }
+}
+.a-main{
+    @include main-base; 
+}
+/////////////////////////////////////
+//特定商取引
+//////////////////////////////////////
+.l-header{
+    @include header-base;
+    &::before{
+    background: url(../images/header-base.jpg);
+    }
+}
+.l-main{
+    @include main-base; 
+}
+/////////////////////////////////////
+//プライバシーポリシー
+//////////////////////////////////////
+.p-header{
+    @include header-base;
+    &::before{
+    background: url(../images/header-base.jpg);
+    }
+}
+.p-main{
+    @include main-base; 
+}

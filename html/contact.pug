@@ -1,0 +1,52 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    // ↓ レスポンシブ対応に必須の記述
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    // ↓ 検索結果画面で表示される文言
+    meta(name="description" content="LLOTD’S COFFEE お問い合わせ")
+    // ↓ 検索ワードをカンマ区切りでcontent内に指定
+    meta(name="keywords" content="LLOTD’S COFFEE,お問い合わせ")
+    // ↓ 検索にヒットしないようにする(noindex) リンクとの関係性を切る（nofollow）
+    meta(name="robots" content="noindex, nofollow")
+    title お問い合わせ
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="../css/style.css")
+  body
+    .wrapper
+        header.co-header
+            h1
+                img.header__logo(src="../images/logo1-white.svg" alt="LLOTD’S COFFEE お問い合わせ")
+            p.header__ttl contact us
+                span.header__ttl-small お問い合わせ
+        include ../gnav
+        main.co-main
+            section.co-sec1
+                h2.co-sec1__ttl 当社への お問い合わせは、下記フォームより お願い致します。
+                form#foem.form(action="#" method="post")  
+                  //- labe.form__name(for="name" )span.form__small ※お名前
+                  labe.form__name(for="name")
+                    small.form__small ※
+                    | お名前
+                  input#name.form__name-02(type="text")
+                  labe.form__mail(for="mail")
+                    small.form__small ※
+                    | メールアドレス
+                  input#mail.form__mail-02(type="email")
+                  labe.form__text(for="text") 
+                    small.form__small ※
+                    | メッセージ
+                  textarea#text.form__text-02(name="text")
+                  small.form__small-02 ※は必須入力事項です。
+                  input.form__btn(type="submit" value="送信")
+        include ../footer
+    // ここから下にjsファイル設置
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../js/function.js")
+   
+//- npm init -y
+//- npm i -D gulp gulp-sass
+//- npm i -D gulp-pug
+//- npx pug index.pug --watch --pretty
+//- npx pug html/contact.pug --watch --pretty

@@ -1,0 +1,58 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    // ↓ レスポンシブ対応に必須の記述
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    // ↓ 検索結果画面で表示される文言
+    meta(name="description" content="LLOTD’S COFFEE 会社概要")
+    // ↓ 検索ワードをカンマ区切りでcontent内に指定
+    meta(name="keywords" content="LLOTD’S COFFEE,会社概要")
+    // ↓ 検索にヒットしないようにする(noindex) リンクとの関係性を切る（nofollow）
+    meta(name="robots" content="noindex, nofollow")
+    title 会社概要
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="../css/style.css")
+  body
+    .wrapper
+        header.a-header
+            h1
+                img.header__logo(src="../images/logo1-white.svg" alt="LLOTD’S COFFEE お問い合わせ")
+            p.header__ttl about us
+                span.header__ttl-small 会社概要
+        include ../gnav
+        main.a-main
+            section.a-sec1
+                h2.a-sec1__ttl  会社概要
+                p.a-sec1__txt 会社名
+                p.a-sec1__txt-02 ロイズコーヒーユニオン株式会社
+                p.a-sec1__txt 代表者
+                p.a-sec1__txt-02 酒巻　悠大
+                p.a-sec1__txt 本社
+                p.a-sec1__txt-03 〒062-0034
+                p.a-sec1__txt-02 北海道札幌市豊平区西岡4条10丁目7-1
+                p.a-sec1__txt 電話番号
+                p.a-sec1__txt-03 TEL：011-590-9031
+                p.a-sec1__txt-02 FAX：011-590-9032
+                p.a-sec1__txt 受付時間
+                p.a-sec1__txt-02 9時～17時（土日祝は休業)
+                p.a-sec1__txt 設立年月日
+                p.a-sec1__txt-02 1984年4月16日
+                p.a-sec1__txt 事業内容
+                p.a-sec1__txt-03 コーヒー豆焙煎
+                p.a-sec1__txt-03 コーヒー関連商材の販売
+                p.a-sec1__txt-03 カフェ運営
+                p.a-sec1__txt-02 食品卸事業
+                p.a-sec1__txt 資本金
+                p.a-sec1__txt-02 500万円
+                
+        include ../footer
+    // ここから下にjsファイル設置
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../js/function.js")
+   
+//- npm init -y
+//- npm i -D gulp gulp-sass
+//- npm i -D gulp-pug
+//- npx pug index.pug --watch --pretty
+//- npx pug html/about.pug --watch --pretty

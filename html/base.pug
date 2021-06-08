@@ -1,0 +1,37 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    // ↓ レスポンシブ対応に必須の記述
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    // ↓ 検索結果画面で表示される文言
+    meta(name="description" content="LLOTD’S COFFEE ")
+    // ↓ 検索ワードをカンマ区切りでcontent内に指定
+    meta(name="keywords" content="LLOTD’S COFFEE,")
+    // ↓ 検索にヒットしないようにする(noindex) リンクとの関係性を切る（nofollow）
+    meta(name="robots" content="noindex, nofollow")
+    title 
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="../css/style.css")
+  body
+    .wrapper
+        header.c-header
+            h1
+                img.header__logo(src="../images/logo1-white.svg" alt="LLOTD’S COFFEE お問い合わせ")
+            p.header__ttl contact us
+                span.header__ttl-small お問い合わせ
+        include ../gnav
+        main.c-main
+            section.c-sec1
+                h2.c-sec1__ttl 当社への お問い合わせは、下記フォームより お願い致します。
+                
+        include ../footer
+    // ここから下にjsファイル設置
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../js/function.js")
+   
+//- npm init -y
+//- npm i -D gulp gulp-sass
+//- npm i -D gulp-pug
+//- npx pug index.pug --watch --pretty
+//- npx pug html/contact.pug --watch --pretty
